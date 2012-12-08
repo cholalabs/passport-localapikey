@@ -3,7 +3,7 @@
 [Passport](http://passportjs.org/) strategy for authenticating with a apikey.
 
 This module lets you authenticate using a apikey in your Node.js
-applications.  By plugging into Passport, local apikey authentication can be easily and
+applications which is used to build rest apis.By plugging into Passport, local apikey authentication can be easily and
 unobtrusively integrated into any application or framework that supports
 [Connect](http://www.senchalabs.org/connect/)-style middleware, including
 [Express](http://expressjs.com/).
@@ -47,7 +47,7 @@ application:
 
 ## Examples
 
-
+    curl -v -d "apikey=asdasjsdgfjkjhg" http://127.0.0.1:3000/api/authenticate
 
 ## Tests
 
