@@ -1,13 +1,17 @@
 {
   "name": "passport-localapikey",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Local api key authentication strategy for Passport.",
-  "author": { "name": "Sudhakar Mani", "email": "mail4sudhakar@gmail.com", "url": "http://www.sudhakarmani.com/" },
+  "author": {
+    "name": "Sudhakar Mani",
+    "email": "mail4sudhakar@gmail.com",
+    "url": "http://www.sudhakarmani.com/"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/cholalabs/passport-localapikey.git"
   },
-  "bugs": { 
+  "bugs": {
     "url": "https://github.com/cholalabs/passport-localapikey/issues"
   },
   "main": "./lib/passport-localapikey",
@@ -21,10 +25,20 @@
   "scripts": {
     "test": "NODE_PATH=lib node_modules/.bin/vows test/*-test.js"
   },
-  "engines": { "node": ">= 0.4.0" },
-  "licenses": [ {
-    "type": "MIT",
-    "url": "http://www.opensource.org/licenses/MIT" 
-  } ],
-  "keywords": ["passport", "local apikey", "auth", "authn", "authentication"]
+  "engines": {
+    "node": ">= 0.4.0"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
+  "keywords": [
+    "passport",
+    "local apikey",
+    "auth",
+    "authn",
+    "authentication"
+  ]
 }

@@ -1,0 +1,29 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'version',
+1 verbose cli   '0.0.3' ]
+2 info using npm@1.1.48
+3 info using node@v0.8.6
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose config file C:\Users\sudhakar\.npmrc
+6 verbose config file C:\Program Files\nodejs\etc\npmrc
+7 verbose config file C:\Program Files\nodejs\node_modules\npm\npmrc
+8 silly exec git "status" "--porcelain"
+9 silly git,status,--porcelain, spawning
+10 error Error: Git working directory not clean.
+10 error M package.json
+10 error     at C:\Program Files\nodejs\node_modules\npm\lib\version.js:64:33
+10 error     at ChildProcess.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\exec.js:61:5)
+10 error     at ChildProcess.EventEmitter.emit (events.js:91:17)
+10 error     at Process._handle.onexit (child_process.js:674:10)
+11 error If you need help, you may report this log at:
+11 error     <http://github.com/isaacs/npm/issues>
+11 error or email it to:
+11 error     <npm-@googlegroups.com>
+12 error System Windows_NT 6.1.7601
+13 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "version" "0.0.3"
+14 error cwd C:\Users\sudhakar\Documents\GitHub\passport-localapikey
+15 error node -v v0.8.6
+16 error npm -v 1.1.48
+17 verbose exit [ 1, true ]
