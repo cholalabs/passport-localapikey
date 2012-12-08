@@ -109,15 +109,15 @@ app.configure(function() {
 
 
 app.get('/', function(req, res){
-  res.render('index', { user: req.user });
+  res.json({ message: "Authenticated" })
 });
 
-app.get('/account', ensureAuthenticated, function(req, res){
-  res.render('account', { user: req.user });
+app.get('/api/account', ensureAuthenticated, function(req, res){  
+  res.json({ message: "Authenticated" })
 });
 
-app.get('/login', function(req, res){
-  res.render('login', { user: req.user, message: req.flash('error') });
+app.get('/api/unauthorized', function(req, res){
+  res.json({ message: "Authentication Error" })
 });
 
 // POST /login
@@ -126,11 +126,11 @@ app.get('/login', function(req, res){
 //   login page.  Otherwise, the primary route function function will be called,
 //   which, in this example, will redirect the user to the home page.
 //
-//   curl -v -d "username=bob&password=secret" http://127.0.0.1:3000/login
-app.post('/login', 
-  passport.authenticate('localapikey', { failureRedirect: '/login', failureFlash: true }),
+//   curl -v -d "apikey=asdasjsdgfjkjhg" http://127.0.0.1:3000/api/authenticate
+app.post('/api/authenticate', 
+  passport.authenticate('localapikey', { failureRedirect: '/api/unauthorized', failureFlash: true }),
   function(req, res) {
-    res.redirect('/');
+     res.json({ message: "Authenticated" })
   });
   
 // POST /login
@@ -159,6 +159,7 @@ app.get('/logout', function(req, res){
 
 app.listen(3000);
 
+console.log("Server running on port 3000");
 
 // Simple route middleware to ensure user is authenticated.
 //   Use this route middleware on any resource that needs to be protected.  If
@@ -167,5 +168,5 @@ app.listen(3000);
 //   login page.
 function ensureAuthenticated(req, res, next) {
   if (req.isAuthenticated()) { return next(); }
-  res.redirect('/login')
+  res.redirect('/api/unauthorized')
 }
