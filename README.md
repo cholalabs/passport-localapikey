@@ -21,11 +21,10 @@ The strategy requires a `verify` callback, which accepts these
 credentials and calls `done` providing a user.
 
     passport.use(new LocalAPIKeyStrategy(
-      function(username, password, done) {
-        User.findOne({ username: username }, function (err, user) {
+      function(apikey, done) {
+        User.findOne({ apikey: apikey }, function (err, user) {
           if (err) { return done(err); }
           if (!user) { return done(null, false); }
-          if (!user.verifyPassword(password)) { return done(null, false); }
           return done(null, user);
         });
       }
@@ -39,10 +38,10 @@ authenticate requests.
 For example, as route middleware in an [Express](http://expressjs.com/)
 application:
 
-    app.post('/login', 
-      passport.authenticate('localapikey', { failureRedirect: '/login' }),
+    app.post('/api/authenticate', 
+      passport.authenticate('localapikey', { failureRedirect: '/api/unauthorized' }),
       function(req, res) {
-        res.redirect('/');
+        res.json({ message: "Authenticated" })
       });
 
 ## Examples
