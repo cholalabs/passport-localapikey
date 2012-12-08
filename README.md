@@ -33,7 +33,7 @@ credentials and calls `done` providing a user.
 
 #### Authenticate Requests
 
-Use `passport.authenticate()`, specifying the `'local apikey'` strategy, to
+Use `passport.authenticate()`, specifying the `'localapikey'` strategy, to
 authenticate requests.
 
 For example, as route middleware in an [Express](http://expressjs.com/)
