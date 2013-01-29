@@ -48,6 +48,8 @@ application:
 
     curl -v -d "apikey=asdasjsdgfjkjhg" http://127.0.0.1:3000/api/authenticate
 
+    curl http://localhost:3000/api/authenticate -H "apikey:asdasjsdgfjkjhg" -v
+    
 ## Tests
 
     $ npm install --dev
