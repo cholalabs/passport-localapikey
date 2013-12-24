@@ -3,7 +3,6 @@ var assert = require('assert');
 var util = require('util');
 var localapikey = require('passport-localapikey');
 
-
 vows.describe('passport-localapikey').addBatch({
   
   'module': {
