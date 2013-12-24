@@ -8,11 +8,11 @@ vows.describe('passport-localapikey').addBatch({
   
   'module': {
     'should report a version': function (x) {
-      assert.isString(local.version);
+      assert.isString(localapikey.version);
     },
     
     'should export BadRequestError': function (x) {
-      assert.isFunction(local.BadRequestError);
+      assert.isFunction(localapikey.BadRequestError);
     },
   },
   
