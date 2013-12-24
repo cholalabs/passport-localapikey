@@ -215,45 +215,7 @@ vows.describe('LocalAPIKeyStrategy').addBatch({
     },
   },
 
-  'strategy handling a request with parameter options set to object-formatted string': {
-    topic: function() {
-      var strategy = new LocalAPIKeyStrategy({apikeyField: 'user[apikey]'}, function(){});
-      return strategy;
-    },
-
-    'after augmenting with actions': {
-      topic: function(strategy) {
-        var self = this;
-        var req = {};
-        strategy.success = function(user) {
-          self.callback(null, user);
-        }
-        strategy.fail = function() {
-          self.callback(new Error('should-not-be-called'));
-        }
-
-        strategy._verify = function(apikey, done) {
-          done(null, { apikey:apikey });
-        }
-
-        req.body = {};
-        req.body.user = {};
-        req.body.user.apikey = 'a6578936DBJJJqwewrtrt';
-
-        process.nextTick(function () {
-          strategy.authenticate(req);
-        });
-      },
-
-      'should not generate an error' : function(err, user) {
-        assert.isNull(err);
-      },
-      'should authenticate' : function(err, user) {
-        assert.equal(user.apikey, 'a6578936DBJJJqwewrtrt');
-      },
-    },
-  },
-
+ 
   'strategy handling a request with additional info': {
     topic: function() {
       var strategy = new LocalAPIKeyStrategy(function(){});
