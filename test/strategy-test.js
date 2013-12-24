@@ -328,7 +328,7 @@ vows.describe('LocalAPIKeyStrategy').addBatch({
         assert.isNull(err);
       },
       'should pass additional info' : function(err, info) {
-        assert.equal(info.message, 'Wrong APIKey');
+        assert.equal(info.message, 'Wrong ApiKey');
       },
     },
   },
