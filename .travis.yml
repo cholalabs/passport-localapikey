@@ -2,3 +2,8 @@ language: "node_js"
 node_js:
   - 0.4
   - 0.6
+deploy:
+  provider: npm
+  api_key: "ZixErx27oTHZk83keqzc"
+  on:
+    tags: true
