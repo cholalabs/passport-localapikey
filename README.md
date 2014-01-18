@@ -39,7 +39,7 @@ For example, as route middleware in an [Express](http://expressjs.com/)
 application:
 
     app.post('/api/authenticate', 
-      passport.authenticate('localapikey', { failureRedirect: '/api/unauthorized' }),
+      passport.authenticate('localapikey', { session: false,failureRedirect: '/api/unauthorized' }),
       function(req, res) {
         res.json({ message: "Authenticated" })
       });
