@@ -1,6 +1,6 @@
 {
   "name": "passport-localapikey",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Local api key authentication strategy for Passport.",
   "author": { "name": "Sudhakar Mani", "email": "mail4sudhakar@gmail.com", "url": "http://www.sudhakarmani.com/" },
   "repository": {
@@ -26,5 +26,5 @@
     "type": "MIT",
     "url": "http://www.opensource.org/licenses/MIT"
   } ],
-  "keywords": ["passport", "local apikey", "auth", "authn", "authentication"]
+  "keywords": ["passport", "passport apikey","local apikey", "auth", "authn", "authentication"]
 }
